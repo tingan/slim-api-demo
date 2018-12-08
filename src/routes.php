@@ -14,7 +14,7 @@ $app->get('/', function (Request $request, Response $response, array $args) {
 
 // Calculate circle area.
 $app->get('/area/circle/{radius}', function (Request $request, Response $response, array $args) {
-  if (is_numeric($args['radius']) && (float) $args['radius'] >= 0) {
+  if (is_numeric($args['radius']) && (float) $args['radius'] > 0) {
     $radius = (float) $args['radius'];
   }
   else {
@@ -36,7 +36,7 @@ $app->get('/area/circle/{radius}', function (Request $request, Response $respons
 // Calculate square area.
 $app->get('/area/square', function (Request $request, Response $response) {
   $queryParams = $request->getQueryParams();
-  if (is_numeric($queryParams['length']) && (float) $queryParams['length'] >= 0) {
+  if (is_numeric($queryParams['length']) && (float) $queryParams['length'] > 0) {
     $length = (float) $queryParams['length'];
   }
   else {
@@ -58,7 +58,7 @@ $app->get('/area/square', function (Request $request, Response $response) {
 // Calculate rectangle area.
 $app->post('/area/rectangle', function (Request $request, Response $response) {
   $postParams = $request->getParsedBody();
-  if (is_numeric($postParams['length']) && is_numeric($postParams['width']) && (float) $postParams['length'] >= 0 && (float) $postParams['width'] >= 0) {
+  if (is_numeric($postParams['length']) && is_numeric($postParams['width']) && (float) $postParams['length'] > 0 && (float) $postParams['width'] > 0) {
     $length = (float) $postParams['length'];
     $width = (float) $postParams['width'];
   }
