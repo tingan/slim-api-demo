@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <title>Area calculator by slim 3</title>
+    <link href='//fonts.googleapis.com/css?family=Lato:300' rel='stylesheet'
+          type='text/css'>
+    <style>
+        body {
+            margin: 50px 0 0 0;
+            padding: 0;
+            width: 100%;
+            font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+            text-align: center;
+            color: #aaa;
+            font-size: 18px;
+        }
+
+        h1 {
+            color: #719e40;
+            letter-spacing: -3px;
+            font-family: 'Lato', sans-serif;
+            font-size: 100px;
+            font-weight: 200;
+            margin-bottom: 0;
+        }
+
+        ul {
+            list-style: none;
+        }
+    </style>
+</head>
+<body>
+<h1>Area Calculation REST APIs</h1>
+<div>APIs format:</div>
+<ul>
+    <li>circle: GET /area/circle/{radius} , e.g. <a href="/area/circle/5">/area/circle/5</a>
+    </li>
+    <li>square: GET /area/square?length={length}, e.g. <a
+                href="/area/square?length=5">/area/square?length=5</a></li>
+    <li>rectangle: POST /area/rectangle , post parameters: length, width, <br>
+        <form name="myform" action="/area/rectangle" method="post">
+            <label for="length">length:</label>
+            <input type="text" name="length" id="length" value="4"/>
+            <label for="width">width:</label>
+            <input type="text" name="width" id="width" value="5"/>
+            <button>Submit</button>
+        </form>
+
+        <script>
+          var button = document.querySelector('form[name="myform"] > button');
+          button.addEventListener(function () {
+            document.querySelector("form[name="
+            myform
+            "]"
+          ).
+            submit();
+          });
+        </script>
+
+    </li>
+</ul>
+</body>
+</html>
