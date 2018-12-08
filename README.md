@@ -20,5 +20,5 @@ If you  run the site in PHP built-in server as above with float path parameter a
 http://localhost:8000/area/circle/5.1 
 it wont work. the reason is that the PHP built-in server doesn't have the apache or nginx rewrite capability.
 You have two choices to solve this issue:
-1) Use apache or nginx or MAMP, XMAPP etc.
+1) Use apache or nginx or MAMP etc.
 2) use http://localhost:8000/index.php/area/circle/5.1 
