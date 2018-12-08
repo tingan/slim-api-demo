@@ -9,7 +9,7 @@ Run this command from the directory in which you want to install your new Slim F
     git clone git@github.com:tingan/slim-api-demo.git
     cd slim-api-demo
     composer install
-    php -S localhost:8000 -t public public/index.php
+    composer start (OR php -S localhost:8000 -t public public/index.php)
 
 Replace 8000 with other port number, if it's already occupied.
 
